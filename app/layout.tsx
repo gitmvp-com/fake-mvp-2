@@ -4,6 +4,7 @@ import type { ReactNode } from 'react';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 import { AuthProvider } from '@/contexts/AuthContext';
 import TopBar from '@/components/TopBar';
+import Footer from '@/components/Footer';
 import './globals.css';
 
 export default function RootLayout({
@@ -21,7 +22,14 @@ export default function RootLayout({
               <main className="flex-1">
                 {children}
               </main>
+              <Footer />
             </div>
+          </AuthProvider>
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
           </AuthProvider>
         </ThemeProvider>
       </body>
